@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+
+   <header>
+        <div class="nav-wrapper">
+            
+                <div class="topnav" id="myTopnav">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#news">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" 
+                    onclick="myFunction()">&#9776;</a>
+                </div>
+                
+                <div id="home" class="name">Andreieva Olga</div>
+        </div>
+
+
+
+           
+                <div class="intro">
+                     <div class="text">
+                        <h2 id="art" > My gallery of original Art</h2>  
+                        <p>Browse my art gallery online for a most impressive original art. </p>
+                         <!--The categories include abstract; expressionist; contemporary; landscape; nature; figurative; cityscapes; still life; cubist; and surrealism. -->
+                     </div>                                    
+                    
+                    <div class="image">                      
+                        <picture>
+                            <source 
+                            media="(min-width: 1000px)"
+                            srcset="assets/images/intro.jpg">
+                            <source 
+                            media="(min-width: 600px)"
+                            srcset="assets/images/alt.jpg">
+                            <img src="assets/images/alt.jpg" 
+                            alt="art">
+                        </picture> 
+                    </div>
+
+
+
+                </div>
+
+                
+
+                
+               
+                
+
+            </div>
+            
+            
+
+             
+        </div>   
+    </header>
+    <main>
+        <div id="gallery" class="gallery">
+            <div class="titel">
+               <h1 class="animate__animated animate__zoomIn"> gallery</h1> 
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="ray-one">
+            
+                <img class="ImgThumbnail" src="assets/images/1.jpg"alt="Snow"/>
+                <img class="ImgThumbnail" src="assets/images/2.jpg"alt="Snow"/>
+                <img class="ImgThumbnail" src="assets/images/3.jpg"alt="Snow"/>
+                <img class="ImgThumbnail" src="assets/images/4.jpg"alt="Snow"/>
+            </div>  
+            <div class="ray-one">
+                <img class="ImgThumbnail" src="assets/images/5.jpg"alt="Snow"/>
+                <img class="ImgThumbnail" src="assets/images/6.jpg"alt="Snow"/>
+                <img class="ImgThumbnail" src="assets/images/7.jpg"alt="Snow"/>
+                <img class="ImgThumbnail" src="assets/images/8.jpg"alt="Snow"/>
+            </div>
+            <div class="modal">
+            <span class="close">x</span>
+            
+            <img class="modalImage" id="img01"/>
+            <div id="caption"></div>
+            </div>
+            <script>
+            var modalEle = document.querySelector(".modal");
+            var modalImage = document.querySelector(".modalImage");
+            var captionText = document.getElementById("caption");
+
+            Array.from(document.querySelectorAll(".ImgThumbnail")).forEach(item => {
+            item.addEventListener("click", event => {
+                modalEle.style.display = "block";
+                modalImage.src = event.target.src;
+                captionText.innerHTML = item.alt;
+            });
+            });
+            document.querySelector(".close").addEventListener("click", () => {
+            modalEle.style.display = "none";
+            });
+            </script>
+
+
+         </div>  
+
+
+    </main>
+    <footer>
+        <div id="contact" class="contact">
+           
+            <div class="e-mail">
+                <p>Looking for something special?</p>
+                <p> Have any questions? </p>
+                <i class="far fa-envelope"> my@gmail.com</i>         
+            </div>   
+            
+            
+            
+        </div>
+        <div class="signature">
+            <h6><i class="fas fa-code">
+            </i> with <i class="fas fa-heart"></i> by Olga Andreieva</h6>
+        </div>
+        <p></p>
+    </footer>
+
+    <!--<script>
+        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-20px";
+          }
+        }
+        </script>-->
+
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+  
+</body>
+</html>
