@@ -47,7 +47,7 @@ body{
  .topnav .icon {
    display: none;
  }
- .topnav a:hover, .dropdown:hover .dropbtn {
+ .topnav a:hover{
   
    color:  #f73939;
    border-bottom: 3px solid  #f73939;
